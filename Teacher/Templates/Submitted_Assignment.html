@@ -36,29 +36,24 @@
 <body>
 
 <!--canvas navbar-->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
-    <div class="container-fluid">
-        <a class="navbar-brand text-warning" href="#"><strong>Online Assignment Submission Portal</strong></a>
-
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark " aria-label="Main navigation"
+        style="background-color: #051622;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">AssignEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="{% url 'Teacher_' %}">Dashboard</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="dropdown01" data-bs-toggle="dropdown"
                        aria-expanded="false">Administrations</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown01">
                         <li><a class="dropdown-item" href="Assignment_Add_p">Add Assignment</a></li>
@@ -90,11 +85,12 @@
 
             <!--     button    -->
             <div class="d-flex">
-                <div class="btn-group me-2">
-                    <button type="button" class="btn btn-warning btn-outline-primary text-dark" data-bs-toggle="modal"
+                <button type="button" class="btn"
+                            style="background-color: #051622; color: white;" data-bs-toggle=" modal"
                             data-bs-target="#staticBackdrop">
-                        <a class="text-decoration-none text-dark" href="{% url 'Teacher_Logout' %}">Logout</a>
-                    </button>
+                            <a class="text-decoration-none" style="background-color: #051622; color: white;" href=" {%
+                                url 'Student_Logout' %}">Logout</a>
+                        </button>
                 </div>
             </div>
         </div>
@@ -104,14 +100,13 @@
 <!--canvas end-->
 
 
-<div class="bg-dark text-warning mt-5 p-1 ">
-    <h1>Assignment Details</h1>
+<div class="bg-light;" style="color:#003366; text-align:center; margin-top:20px;">   <h1>Submitted Assignment</h1>
 </div>
 {% if data %}
 <div class="container mt-5">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
-        <tr class="bg-dark text-warning">
+        <tr class="bg-light" style="color:#003366; text-align:center;">
             <th>Sr.No.</th>
             <th>Assignment Title</th>
             <th>Subject</th>
@@ -126,7 +121,7 @@
             <td>{{j.Subject_Name}}</td>
             <td>{{j.Submission_Date}}</td>
             <td>
-                <a class="btn btn-warning" href="download_Assignment_S?ids={{j.id}}">View Assignment</a>
+                <a class="btn "style="background-color: #2ebdb4; color: 04406b; text-align:center;" href="download_Assignment_S?ids={{j.id}}">View Assignment</a>
             </td>
         </tr>
         {% endfor %}

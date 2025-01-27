@@ -15,6 +15,9 @@ def Contact_Page(request):
 def Ask_Page(request):
     return render(request, 'Ask.html')
 
+def StartNow_Page(request):
+    return render(request, 'StartNow.html')
+
 
 
 # ------------------Admin-------------

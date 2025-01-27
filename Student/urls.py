@@ -20,6 +20,7 @@ from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
+    # path('home.html', views.home, name='home'),
     path('Student_dashboard', views.Student_dashboard, name='Student_dashboard'),
 
     # Student update password

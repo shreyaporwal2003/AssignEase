@@ -22,6 +22,8 @@ urlpatterns = [
     path('About', views.About_Page, name='About'),
     path('Contact Us', views.Contact_Page, name='Contact Us'),
     path('Ask.html', views.Ask_Page, name='Ask'),
+    path('StartNow', views.StartNow_Page, name='StartNow'),
+
 
     # Admin------------
     path('Admin_Login', views.Admin_Login, name='Admin_Login'),
@@ -39,6 +41,9 @@ urlpatterns = [
     path('Teacher_Login', views.Teacher_Login, name='Teacher_Login'),
     path('Teacher_', views.Teacher_, name='Teacher_'),
     path('Teacher_Logout', views.Teacher_Logout, name='Teacher_Logout'),
+
+
+    
 
 
 ]

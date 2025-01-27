@@ -15,7 +15,6 @@ import os
 
 try:
     import pymysql
-
     pymysql.install_as_MySQLdb()
 except:
     pass
@@ -37,12 +36,12 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    # my aap ----------
+    # My apps ----------
     'Home.apps.HomeConfig',
     'Student.apps.StudentConfig',
     'Admin.apps.AdminConfig',
     'Teacher.apps.TeacherConfig',
-    # ------------
+    # -------------------
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -92,7 +91,6 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'Shreya167#',
         'PORT': '3306'
-
     }
 }
 
@@ -127,8 +125,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-# session timing
-SESSION_COOKIE_AGE = 5 * 60  # 5min
+# Session timing
+SESSION_COOKIE_AGE = 5 * 60  # 5 minutes
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -139,10 +137,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')  # Added STATIC_ROOT
 
+# Media files (user-uploaded files)
 MEDIA_URL = '/Media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'Media')
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

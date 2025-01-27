@@ -29,24 +29,19 @@
 <body>
 
 <!--canvas navbar-->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
-    <div class="container-fluid">
-        <a class="navbar-brand text-warning" href="#"><strong>Online Assignment Submission Portal</strong></a>
-
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark " aria-label="Main navigation"
+        style="background-color: #051622;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">AssignEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
         <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'Student_' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'Student_' %}">Dashboard</a>
                 </li>
@@ -61,13 +56,12 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="dropdown03" data-bs-toggle="dropdown"
                        aria-expanded="false">My Account</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown03">
                         <li><a class="dropdown-item" href="my_account">My Profile</a></li>
                         <li><a class="dropdown-item" href="StudentUpdate_Password">Change Password</a></li>
                         <li><a class="dropdown-item" href="data_save">Change Profile Picture</a></li>
-                        <li><a class="dropdown-item" href="#">Login to another account</a></li>
                     </ul>
                 </li>
             </ul>
@@ -76,10 +70,12 @@
             <!--     button    -->
             <div class="d-flex">
                 <div class="btn-group me-2">
-                    <button type="button" class="btn btn-warning btn-outline-primary text-dark" data-bs-toggle="modal"
+                    <button type="button" class="btn"
+                            style="background-color: #051622; color: white;" data-bs-toggle=" modal"
                             data-bs-target="#staticBackdrop">
-                        <a class="text-decoration-none text-dark" href="{% url 'Student_Logout' %}">Logout</a>
-                    </button>
+                            <a class="text-decoration-none" style="background-color: #051622; color: white;" href=" {%
+                                url 'Student_Logout' %}">Logout</a>
+                        </button>
                 </div>
             </div>
         </div>
@@ -90,8 +86,8 @@
 
 <center>
     {% for j in Student_data %}
-    <div class="mt-4 border border-dark" style="width:30vw;">
-        <header class="bg-dark text-warning">
+    <div class="mt-4 " style="width:30vw;">
+        <header class="bg-light;" style="color:#003366">
             <h1> Upload Your Image </h1>
             <hr>
         </header>
@@ -104,9 +100,9 @@
             <br><br>
             <img id="bl" src="{{j.Image}}" alt="your image"/>
 
-            <footer class="bg-dark">
+            <footer class="bg-light">
                 <hr>
-                <button type="submit" class="btn btn-warning btn-outline-primary text-dark">Upload</button>
+                <button type="submit" class="btn text-dark p-2 " style="background-color: #2ebdb4; color: 04406b; margin-bottom: 10px;">Upload</button>
             </footer>
         </form>
 

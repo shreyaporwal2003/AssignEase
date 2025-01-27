@@ -1,190 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Student Dashboard</title>
     {% load static %}
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-            crossorigin="anonymous"></script>
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
-            crossorigin="anonymous"></script>
+        integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+        crossorigin="anonymous"></script>
     <!--    offcanvas-->
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-            crossorigin="anonymous"></script>
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
 
     <style>
-    .button1 {
-  position: relative;
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
+        .greeting-card {
+            background-color: #e0f8fa;
+            padding: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+        }
 
-.button1:after {
-  content: "";
-  background: #f1f1f1;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
+        .greeting-text h2 {
+            font-weight: bold;
+        }
 
-.button1:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
+        .graphic img {
+            max-width: 100%;
+            height: auto;
+        }
 
-        .button1:hover {
-  box-shadow: 0 20px 26px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
-}
+        .overview-button {
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
+        .overview-button.yellow {
+            background-color: #155383;
+        }
 
+        .overview-button.blue {
+            background-color: #155383;
+        }
+
+        .overview-button.pink {
+            background-color: #155383;
+        }
+
+        .overview-button.purple {
+            background-color: #155383;
+        }
+        .overview-button i {
+            font-size: 2.5rem;
+        }
     </style>
 
     <!-- Custom styles for this template -->
     <link href="{% static 'CSS/offcanvas.css' %}" rel="stylesheet">
 </head>
+
 <body>
-<!--canvas navbar-->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
-    <div class="container-fluid">
-        <a class="navbar-brand text-warning" href="#"><strong>Online Assignment Submission Portal</strong></a>
-
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+    <!--canvas navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark " aria-label="Main navigation"
+        style="background-color: #051622;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">AssignEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'Student_' %}">Dashboard</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                       aria-expanded="false">My Administration</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                        <li><a class="dropdown-item" href="Student/Subject_List">Subject Lists</a></li>
-                        <li><a class="dropdown-item" href="Student/Submit_Assignment_P">Submit Assignment</a></li>
-                        <li><a class="dropdown-item" href="#">My Marks</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
-                       aria-expanded="false">My Account</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                        <li><a class="dropdown-item" href="Student/my_account">My Profile</a></li>
-                        <li><a class="dropdown-item" href="Student/StudentUpdate_Password">Change Password</a></li>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'Student_' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                            aria-expanded="false">My Administration</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="Student/Subject_List">Subject Lists</a></li>
+                            <li><a class="dropdown-item" href="Student/Submit_Assignment_P">Submit Assignment</a></li>
+                            <li><a class="dropdown-item" href="#">My Marks</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                            aria-expanded="false">My Account</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                            <li><a class="dropdown-item" href="Student/my_account">My Profile</a></li>
+                            <li><a class="dropdown-item" href="Student/StudentUpdate_Password">Change Password</a></li>
 
-                        <li><a class="dropdown-item" href="Student/data_save">Edit Profile Picture</a></li>
-
-                        <li><a class="dropdown-item" href="#">Login to another account</a></li>
-                    </ul>
-                </li>
-            </ul>
+                            <li><a class="dropdown-item" href="Student/data_save">Edit Profile Picture</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
 
-            <!--     button    -->
-            <div class="d-flex">
-                <div class="btn-group me-2">
-                    <button type="button" class="btn btn-warning btn-outline-primary text-dark" data-bs-toggle="modal"
+                <!--     button    -->
+                <div class="d-flex">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn"
+                            style="background-color: #051622; color: white;" data-bs-toggle=" modal"
                             data-bs-target="#staticBackdrop">
-                        <a class="text-decoration-none text-dark" href="{% url 'Student_Logout' %}">Logout</a>
-                    </button>
+                            <a class="text-decoration-none" style="background-color: #051622; color: white;" href="{% url 'Student_Logout' %}">Logout</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!--canvas end-->
+    <!--canvas end-->
 
-{% for j in msgS %}
-<h1><strong>
-    <marquee>Welcome {{j.Name}} to your Dashboard</marquee>
-</strong>
-</h1>
-{% endfor %}
-
-<h1 class="bg-dark text-warning p-4 ">Student Dashboard</h1>
-<center>
-    <div class="container-fluid mx-2">
-        <div class="row mx-auto mt-auto">
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="btn-dark rounded-circle button1  text-warning mt-auto mb-auto me-auto mx-auto"
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Student/Subject_List" class="text-decoration-none text-warning">Subject<br>Lists</a>
-                </button>
+    <main class="container my-5">
+        {% for j in msgS %}
+        <div class="container mt-5">
+            <!-- Greeting Card Section -->
+            <div class="greeting-card">
+                <div class="greeting-text flex-grow-1">
+                    <h2>Hi, {{j.Name}}</h2>
+                    <p>Ready to breeze through your tasks?</p>
+                </div>
+                <div class="graphic">
+                    <img src="{% static 'images/undraw_true_friends_c-94-g.svg' %}" class="d-block w-100" alt="Featurette Image 2" style="width: 400px; height: 200px;">
+                </div>
             </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a  class="text-decoration-none text-warning" href="Student/Submit_Assignment_P">Submit<br>Assignment</a>
-                </button>
+            {% endfor %}
+            <div class="row text-center mt-4">
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button yellow" href="{% url 'Subject_List' %}" style="color:#e0f8fa"><i class="bi bi-book"></i><h3>Subjects List</h3></a>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button blue" href="{% url 'Submit_Assignment_P' %}" style="color:#e0f8fa"><i class="bi bi-upload"></i><h3>Submit Assignment</h3></a>
+                </div>
+        
+                <div class="col-md-6 mb-3">
+                    <button class="btn overview-button pink" href="#"><i class="bi bi-bar-chart" style="color:#e0f8fa"></i><h3>My Marks</h3></button>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <ba class="btn overview-button purple" href="#" style="color:#e0f8fa"><i class="bi bi-person"></i><h3>My Account</h3></button>
+                </div>
+                
+                
             </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    My<br>Marks
-                </button>
-            </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a  class="text-decoration-none text-warning" href="Student/my_account">My<br>Account</a>
-                </button>
-            </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                <a  class="text-decoration-none text-warning" href="Student/StudentUpdate_Password">Change<br> Password</a>
-                </button>
-            </div>
-
-
         </div>
+    </main>
 
-    </div>
-</center>
-
-<script src="{% static 'JavaScript/offcanvas.js' %}"></script>
+    <script src="{% static 'JavaScript/offcanvas.js' %}"></script>
 </body>
+
 </html>

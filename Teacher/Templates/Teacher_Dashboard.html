@@ -1,228 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Teacher Dashboard</title>
     {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-            crossorigin="anonymous"></script>
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-            crossorigin="anonymous"></script>
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"
-            integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
-            crossorigin="anonymous"></script>
+        integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ"
+        crossorigin="anonymous"></script>
     <!--    offcanvas-->
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/offcanvas-navbar/">
     <!-- Bootstrap core CSS -->
     <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-            crossorigin="anonymous"></script>
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-            crossorigin="anonymous"></script>
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
 
     <style>
-    .button1 {
-  position: relative;
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
+        .greeting-card {
+            background-color: #e0f8fa;
+            padding: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+        }
 
-.button1:after {
-  content: "";
-  background: #f1f1f1;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
+        .greeting-text h2 {
+            font-weight: bold;
+        }
 
-.button1:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
+        .graphic img {
+            max-width: 100%;
+            height: auto;
+        }
 
-        .button1:hover {
-  box-shadow: 0 20px 26px 0 rgba(0,0,0,0.24), 0 20px 50px 0 rgba(0,0,0,0.19);
-}
+        .overview-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 20px;
+            width: 100%;
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        .overview-button h3 {
+            margin: 0;
+            flex-grow: 1;
+            /* Ensures proper spacing */
+        }
+
+        .overview-button i {
+            font-size: 2.5rem;
+            margin-left: 10px;
+            /* Add space between text and icon */
+        }
 
 
+        .overview-button.yellow {
+            background-color: #155383;
+        }
 
+        .overview-button.blue {
+            background-color: #155383;
+        }
 
+        .overview-button.pink {
+            background-color: #155383;
+        }
 
-
+        .overview-button.purple {
+            background-color: #155383;
+        }
     </style>
 
     <!-- Custom styles for this template -->
     <link href="{% static 'CSS/offcanvas.css' %}" rel="stylesheet">
 </head>
+
 <body>
-<!--canvas navbar-->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" aria-label="Main navigation">
-    <div class="container-fluid">
-        <a class="navbar-brand text-warning" href="#"><strong>Online Assignment Submission Portal</strong></a>
-
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+    <!--canvas navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark " aria-label="Main navigation"
+        style="background-color: #051622;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: white;">AssignEase</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
                 aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'Teacher_' %}">Dashboard</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
-                       aria-expanded="false">Administrations</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                        <li><a class="dropdown-item" href="Teacher/Assignment_Add_p">Add Assignment</a></li>
-                        <li><a class="dropdown-item" href="Teacher/Subject_Add_P">Add Subject</a></li>
-                        <li><a class="dropdown-item" href="Teacher/View_Stu_Ass">Submitted Assignment</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown"
-                       aria-expanded="false">Reports</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown02">
-                        <li><a class="dropdown-item" href="Teacher/StudentReport">Student Report</a></li>
-                        <!--                        <li><a class="dropdown-item" href="#">Attendance Report</a></li>-->
-                        <li><a class="dropdown-item" href="Teacher/Assignment_Report">Assignment Report</a></li>
-                        <li><a class="dropdown-item" href="Teacher/Subject_Report">Subject Report</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
-                       aria-expanded="false">My Account</a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                        <li><a class="dropdown-item" href="Teacher/my_account">My Profile</a></li>
-                        <li><a class="dropdown-item" href="Teacher/TeacherUpdate_Password">Change Password</a></li>
-                        <li><a class="dropdown-item" href="Teacher/Teacher_image">Edit Profile Picture</a></li>
-                        <li><a class="dropdown-item" href="#">Login to another account</a></li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'Teacher_' %}">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                            aria-expanded="false">Administrations</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                            <li><a class="dropdown-item" href="Teacher/Assignment_Add_p">Add Assignment</a></li>
+                            <li><a class="dropdown-item" href="Teacher/Subject_Add_P">Add Subject</a></li>
+                            <li><a class="dropdown-item" href="Teacher/View_Stu_Ass">Submitted Assignment</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-bs-toggle="dropdown"
+                            aria-expanded="false">Reports</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown02">
+                            <li><a class="dropdown-item" href="Teacher/StudentReport">Student Report</a></li>
+                            <!--                        <li><a class="dropdown-item" href="#">Attendance Report</a></li>-->
+                            <li><a class="dropdown-item" href="Teacher/Assignment_Report">Assignment Report</a></li>
+                            <li><a class="dropdown-item" href="Teacher/Subject_Report">Subject Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                            aria-expanded="false">My Account</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                            <li><a class="dropdown-item" href="Teacher/my_account">My Profile</a></li>
+                            <li><a class="dropdown-item" href="Teacher/TeacherUpdate_Password">Change Password</a></li>
+                            <li><a class="dropdown-item" href="Teacher/Teacher_image">Edit Profile Picture</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
 
-            <!--     button    -->
-            <div class="d-flex">
-                <div class="btn-group me-2">
-                    <button type="button" class="btn btn-warning btn-outline-primary text-dark" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                        <a class="text-decoration-none text-dark" href="{% url 'Teacher_Logout' %}">Logout</a>
-                    </button>
+                <!--     button    -->
+                <div class="d-flex">
+                    <div class="btn-group me-2">
+                        <button type="button" class="btn" style="background-color: #051622; color: white;"
+                            data-bs-toggle=" modal" data-bs-target="#staticBackdrop">
+                            <a class="text-decoration-none" style="background-color: #051622; color: white;" href="{% url 'Teacher_Logout' %}">Logout</a>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!--canvas end-->
+    <!--canvas end-->
 
-{% for j in msgT %}
-<h1><strong>
-    <marquee>Welcome {{j.Name}} to your Dashboard</marquee>
-</strong>
-</h1>
-{% endfor %}
+    <!-- {% for j in msgT %}
+    <h1><strong>
+            <marquee>Welcome {{j.Name}} to your Dashboard</marquee>
+        </strong>
+    </h1>
+    {% endfor %} -->
 
-<h1 class="bg-dark text-warning p-4 ">Teacher Dashboard</h1>
-<center>
-    <div class="container-fluid mx-5">
-        <div class="row mx-auto mt-auto">
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="btn-dark rounded-circle button1  text-warning mt-auto mb-auto me-auto mx-auto"
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/Assignment_Add_p" class="text-decoration-none text-warning">Add <br> Assignment</a>
-                </button>
+    <main class="container my-5">
+        {% for j in msgT %}
+        <div class="container mt-5">
+            <!-- Greeting Card Section -->
+            <div class="greeting-card">
+                <div class="greeting-text flex-grow-1">
+                    <h2>Hi, {{j.Name}}</h2>
+                    <p>Ready to breeze through your tasks?</p>
+                </div>
+                <div class="graphic">
+                    <img src="{% static 'images/undraw_educator_re_ju47.svg' %}" class="d-block w-100" alt="Featurette Image 2" style="width: 400px; height: 200px;">
+                </div>
             </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/Subject_Add_P" class="text-decoration-none text-warning">Add <br> Subject </a>
-                </button>
+            {% endfor %}
+            <div class="row text-center mt-4">
+                <!-- First Row -->
+                <div class="col-md-6 mb-3" >
+                    <a class="btn overview-button yellow" href="{% url 'Assignment_Add_p' %}" style="color:#e0f8fa">
+                        <h3>Add Assignment</h3>
+                        <i class="bi bi-pencil-square"></i> <!-- Icon for "Add Assignment" -->
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button blue" href="{% url 'Subject_Add_P' %}" style="color:#e0f8fa">
+                        <h3>Add Subject</h3>
+                        <i class="bi bi-journal-plus"></i> <!-- Icon for "Add Subject" -->
+                    </a>
+                </div>
+                <!-- Second Row -->
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button pink" href="{% url 'View_Stu_Ass' %}" style="color:#e0f8fa">
+                        <h3>Submitted Assignments</h3>
+                        <i class="bi bi-file-earmark-check"></i> <!-- Icon for "Submitted Assignments" -->
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button purple" href="{% url 'Assignment_Report' %}" style="color:#e0f8fa">
+                        <h3>Subject/Assignment Reports</h3>
+                        <i class="bi bi-bar-chart-line"></i> <!-- Icon for "Subject/Assignment Reports" -->
+                    </a>
+                </div>
+                <!-- Third Row -->
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button purple" href="{% url 'Student_Report' %}" style="color:#e0f8fa">
+                        <h3>Students Report</h3>
+                        <i class="bi bi-people"></i> <!-- Icon for "Students Report" -->
+                    </a>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <a class="btn overview-button purple" href="{% url 'my_account' %}" style="color:#e0f8fa">
+                        <h3>My Account</h3>
+                        <i class="bi bi-person-circle"></i> <!-- Icon for "My Account" -->
+                    </a>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/View_Stu_Ass" class="text-decoration-none text-warning">Submitted <br>
-                        Assignment</a>
-                </button>
-            </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/Assignment_Report" class="text-warning text-decoration-none">Assignment<br> Report</a>
-                </button>
-            </div>
-            <!--            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">-->
-            <!--                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "-->
-            <!--                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">-->
-            <!--                    Attendance <br> Report-->
-            <!--                </button>-->
-            <!--            </div>-->
 
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/Subject_Report" class="text-warning text-decoration-none">Subject<br>Report</a>
-                </button>
-            </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/StudentReport" class="text-warning text-decoration-none">Student<br> Report</a>
-                </button>
-            </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/my_account" class="text-decoration-none text-warning"> My<br>Account</a>
-                </button>
-            </div>
-            <div class="col-md-2 col-sm-4 border border-2 border-dark mx-2 me-2 mt-3">
-                <button class="rounded-circle btn-dark button1 text-warning mt-auto mb-auto me-auto mx-auto "
-                        style="height:13vw; width:13vw; font-size:2vw; font-weight:bold;">
-                    <a href="Teacher/TeacherUpdate_Password" class="text-decoration-none text-warning">Change<br>
-                        Password</a>
-                </button>
-            </div>
         </div>
-
-    </div>
-</center>
+    </main>
 
 
-<script src="{% static 'JavaScript/offcanvas.js' %}"></script>
+    <script src="{% static 'JavaScript/offcanvas.js' %}"></script>
 </body>
+
 </html>

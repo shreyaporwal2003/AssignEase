@@ -12,6 +12,8 @@ from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
+# def home(request):
+#     return render(request, 'Home.html')
 
 def Student_dashboard(request):
     if request.session.has_key('Student_email'):
